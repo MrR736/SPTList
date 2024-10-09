@@ -5,6 +5,6 @@ case "$1" in
         echo "Downloads"
         ;;
     *)
-        echo
+        echo "E: Unable to locate package $1"
         ;;
 esac
