@@ -9,7 +9,7 @@ case "$1" in
         GM_LATEST_VERSION=$(curl -s https://raw.githubusercontent.com/MrR736/GodotManager/refs/heads/main/Package/Releases)
         cat > "$SCRIPTS_DIR/InstallLists/$1" <<EOL
 echo "GM_VERSION=$GM_LATEST_VERSION"
-echo "GM_LATEST_VERSION=$(curl -s https://raw.githubusercontent.com/MrR736/GodotManager/refs/heads/main/Package/Releases)"
+echo "GM_LATEST_VERSION=\$(curl -s https://raw.githubusercontent.com/MrR736/GodotManager/refs/heads/main/Package/Releases)"
 EOL
         ;;
 esac
