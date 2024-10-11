@@ -7,9 +7,10 @@ case "$1" in
     gm)
         wget -q -O"$SCRIPTS_DIR/Downloads/Setup.zip" "https://github.com/MrR736/GodotManager/raw/refs/heads/main/Package/GodotManager.zip"
         GM_LATEST_VERSION=$(curl -s https://raw.githubusercontent.com/MrR736/GodotManager/refs/heads/main/Package/Releases)
+        rm -rf "$SCRIPTS_DIR/InstallLists/$1"
         cat > "$SCRIPTS_DIR/InstallLists/$1" <<EOL
-GM_VERSION=$GM_LATEST_VERSION
-GM_LATEST_VERSION=\$(curl -s https://raw.githubusercontent.com/MrR736/GodotManager/refs/heads/main/Package/Releases)
+VERSION=$GM_LATEST_VERSION
+LATEST_VERSION=\$(curl -s https://raw.githubusercontent.com/MrR736/GodotManager/refs/heads/main/Package/Releases)
 EOL
         ;;
 esac
