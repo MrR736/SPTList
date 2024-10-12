@@ -9,6 +9,7 @@ case "$1" in
         rm -rf "$SCRIPTS_DIR/InstallLists/$1.list"
         cat > "$SCRIPTS_DIR/InstallLists/$1.list" <<EOL
 VERSION=$(curl -s https://raw.githubusercontent.com/MrR736/GodotManager/refs/heads/main/Package/Releases)
+LATEST_VERSION=\$(curl -s https://raw.githubusercontent.com/MrR736/GodotManager/refs/heads/main/Package/Releases)
 EOL
         ;;
 esac
