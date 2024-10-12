@@ -6,8 +6,8 @@ echo "[https://github.com/MrR736]"
 case "$1" in
     gm)
         wget -q -O"$SCRIPTS_DIR/Downloads/Setup.zip" "https://github.com/MrR736/GodotManager/raw/refs/heads/main/Package/GodotManager.zip"
-        rm -rf "$SCRIPTS_DIR/InstallLists/$1"
-        cat > "$SCRIPTS_DIR/InstallLists/$1" <<EOL
+        rm -rf "$SCRIPTS_DIR/InstallLists/$1.list"
+        cat > "$SCRIPTS_DIR/InstallLists/$1.list" <<EOL
 VERSION=$(curl -s https://raw.githubusercontent.com/MrR736/GodotManager/refs/heads/main/Package/Releases)
 EOL
         ;;
