@@ -5,13 +5,13 @@ echo "[https://github.com/MrR736]"
 
 case "$1" in
     ipt)
-        wget -q -O"$SCRIPTS_DIR/Downloads/Setup.zip" https://github.com/MrR736/InstallPackaceTool/raw/refs/heads/main/Package/InstallPackaceTool.zip
+        wget -q -O"$SCRIPTS_DIR/Downloads/Setup.zip" https://github.com/MrR736/InstallPackageTool/raw/refs/heads/main/Package/InstallPackageTool.zip
         rm -rf "$SCRIPTS_DIR/Remove/$1"
         rm -rf "$SCRIPTS_DIR/InstallLists/$1.list"
         cat > "$SCRIPTS_DIR/InstallLists/$1.list" <<EOL
 COMMAND_NAME=$1
-VERSION=$(curl -s https://raw.githubusercontent.com/MrR736/InstallPackaceTool/refs/heads/main/Package/Releases)
-LATEST_VERSION=curl -s https://raw.githubusercontent.com/MrR736/InstallPackaceTool/refs/heads/main/Package/Releases
+VERSION=$(curl -s https://raw.githubusercontent.com/MrR736/InstallPackageTool/refs/heads/main/Package/Releases)
+LATEST_VERSION=curl -s https://raw.githubusercontent.com/MrR736/InstallPackageTool/refs/heads/main/Package/Releases
 EOL
         ;;
     rt)
